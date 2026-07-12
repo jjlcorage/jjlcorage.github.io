@@ -105,6 +105,10 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-top: 120px;
+    /* Offset for the fixed navigation */
+    box-sizing: border-box;
+    /* Include padding within the section's height */
 }
 
 .hero-container {
