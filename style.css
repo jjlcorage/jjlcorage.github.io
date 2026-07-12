@@ -56,6 +56,7 @@ html {
 }
 
 .logo {
+    font-family: 'Orbitron', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
@@ -189,6 +190,41 @@ main {
     font-size: 1.2rem;
 }
 
+/* Software Grid */
+.software-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.software-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.software-card img {
+    height: 50px;
+    width: auto;
+    filter: grayscale(1) brightness(1.5);
+    transition: filter 0.3s ease-in-out;
+}
+
+.software-card:hover img {
+    filter: grayscale(0) brightness(1);
+}
+
+.software-card p {
+    margin: 0;
+    font-weight: 500;
+}
+
 /* About Section */
 .about-container {
     display: flex;
@@ -252,6 +288,10 @@ main {
 
 .delay-4 {
     transition-delay: 0.4s;
+}
+
+.delay-5 {
+    transition-delay: 0.5s;
 }
 
 /* Responsive Design */
