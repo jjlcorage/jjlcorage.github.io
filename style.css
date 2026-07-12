@@ -161,6 +161,13 @@ main {
     margin-top: 6rem;
 }
 
+.portfolio-category-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+
 /* Portfolio Grid */
 .portfolio-grid {
     display: grid;
