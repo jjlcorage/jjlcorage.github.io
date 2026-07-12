@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Akira Expanded';
+    /* NOTE: You'll need to download the Akira Expanded font and place it in a 'fonts' folder. */
+    src: url('fonts/Akira Expanded Demo.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
 /* General Body & Typography */
 body {
     font-family: 'Inter', sans-serif;
@@ -56,11 +64,13 @@ html {
 }
 
 .logo {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Akira Expanded', sans-serif;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 800;
     text-decoration: none;
     color: #EAEAEA;
+    line-height: 1.1;
+    text-align: center;
 }
 
 .glass-nav ul {
@@ -97,7 +107,12 @@ main {
     text-align: center;
 }
 
-.hero-content h1 {
+.hero-container {
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.hero h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -108,6 +123,10 @@ main {
     font-weight: 300;
     color: #A0A0A0;
     margin-bottom: 2rem;
+}
+
+.bio {
+    margin-bottom: 2.5rem;
 }
 
 .cta-button {
@@ -212,12 +231,6 @@ main {
 .software-card img {
     height: 50px;
     width: auto;
-    filter: grayscale(1) brightness(1.5);
-    transition: filter 0.3s ease-in-out;
-}
-
-.software-card:hover img {
-    filter: grayscale(0) brightness(1);
 }
 
 .software-card p {
@@ -236,11 +249,11 @@ main {
 }
 
 .profile-picture {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 .bio p {
@@ -294,26 +307,70 @@ main {
     transition-delay: 0.5s;
 }
 
+
+.delay-6 {
+    transition-delay: 0.6s;
+}
+
+.delay-7 {
+    transition-delay: 0.7s;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .tagline {
-        font-size: 1rem;
+    .logo {
+        font-size: 1.2rem;
     }
 
     .glass-nav {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 1.5rem;
+        width: 90%;
     }
 
     .glass-nav ul {
         gap: 1rem;
     }
 
+    .glass-nav a {
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding-top: 120px;
+        padding-bottom: 60px;
+        min-height: auto;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .tagline {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        margin-top: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
     .about-container {
         flex-direction: column;
         text-align: center;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
