@@ -21,11 +21,13 @@ html {
     height: 100%;
     z-index: -1;
     background: radial-gradient(circle at top left, rgba(76, 0, 255, 0.1), transparent 40%),
-                radial-gradient(circle at bottom right, rgba(255, 0, 150, 0.1), transparent 40%);
+        radial-gradient(circle at bottom right, rgba(255, 0, 150, 0.1), transparent 40%);
 }
 
 /* Glassmorphism Base Style */
-.glass-nav, .glass-card, .glass-footer {
+.glass-nav,
+.glass-card,
+.glass-footer {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -149,7 +151,8 @@ main {
 
 .video-embed {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
     border-radius: 8px;
@@ -185,6 +188,28 @@ main {
     font-size: 1.2rem;
 }
 
+/* About Section */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.bio p {
+    margin: 0;
+}
+
 /* Footer */
 .glass-footer {
     text-align: center;
@@ -213,8 +238,24 @@ main {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-content h1 { font-size: 2.5rem; }
-    .tagline { font-size: 1rem; }
-    .glass-nav { padding: 0.5rem 1rem; }
-    .glass-nav ul { gap: 1rem; }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .glass-nav {
+        padding: 0.5rem 1rem;
+    }
+
+    .glass-nav ul {
+        gap: 1rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
 }
