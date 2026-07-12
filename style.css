@@ -48,19 +48,22 @@ html {
 /* Header & Navigation */
 .glass-nav {
     position: fixed;
-    top: 20px;
+    top: 1.25rem;
+    /* 20px */
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
     max-width: 1200px;
     z-index: 100;
     padding: 1rem 2rem;
+    box-sizing: border-box;
 }
 
 .glass-nav nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 .logo {
@@ -105,7 +108,8 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 120px;
+    padding-top: 8.5rem;
+    /* ~136px */
     /* Offset for the fixed navigation */
     box-sizing: border-box;
     /* Include padding within the section's height */
@@ -340,7 +344,8 @@ main {
     }
 
     .hero {
-        padding-top: 120px;
+        padding-top: 7.5rem;
+        /* 120px */
         padding-bottom: 60px;
         min-height: auto;
     }
