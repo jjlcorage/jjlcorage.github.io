@@ -136,12 +136,22 @@ html {
 }
 
 .glass-card:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(-4px) scale(1.02);
     border-color: rgba(255, 255, 255, 0.25);
-    border-top-color: rgba(255, 255, 255, 0.4);
-    border-left-color: rgba(255, 255, 255, 0.35);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    background: rgba(255, 255, 255, 0.06);
+    border-top-color: rgba(236, 72, 153, 0.5);
+    /* subtle pink glow on edge */
+    border-left-color: rgba(14, 165, 233, 0.4);
+    /* subtle blue glow on edge */
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.4),
+        /* Base depth shadow */
+        0 0 20px rgba(99, 102, 241, 0.4),
+        /* Indigo glow */
+        0 0 40px rgba(236, 72, 153, 0.3),
+        /* Pink bloom */
+        0 0 60px rgba(14, 165, 233, 0.2);
+    /* Sky blue wide spread */
+    background: rgba(255, 255, 255, 0.08);
 }
 
 /* Header & Navigation */
@@ -397,7 +407,38 @@ main {
 
 .contact-card p {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    color: #EAEAEA;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-card p:hover .mail-icon {
+    color: #6366f1;
+    transform: scale(1.1);
+}
+
+.contact-card p:hover .viber-icon {
+    color: #7360f2;
+    transform: scale(1.1);
+}
+
+.contact-card p:hover .whatsapp-icon {
+    color: #25D366;
+    transform: scale(1.1);
+}
+
+.icon-separator {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 300;
 }
 
 .contact-card a {
