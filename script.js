@@ -33,4 +33,36 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     scrollElements.forEach(el => elementObserver.observe(el));
+
+    // Intersection Observer for active nav links on scroll
+    const sections = document.querySelectorAll('section, footer, header');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                const id = entry.target.getAttribute('id');
+                if (id) {
+                    const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            }
+        });
+    }, {
+        threshold: 0.3,
+        rootMargin: "-80px 0px -50% 0px"
+    });
+
+    sections.forEach(section => navObserver.observe(section));
+
+    // Click handler for nav links to immediately set active state
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
 });
