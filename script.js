@@ -65,4 +65,20 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('active');
         });
     });
+
+    // YouTube Lite click-to-play
+    document.querySelectorAll('.youtube-lite').forEach(el => {
+        const videoId = el.getAttribute('data-video-id');
+        // Set background image to thumbnail
+        el.style.backgroundImage = `url(https://i.ytimg.com/vi/${videoId}/hqdefault.jpg)`;
+        
+        el.addEventListener('click', () => {
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            el.innerHTML = '';
+            el.appendChild(iframe);
+        });
+    });
 });
