@@ -327,6 +327,11 @@ main {
     border-radius: 8px;
 }
 
+.video-embed.vertical {
+    padding-bottom: 177.77%;
+    /* 9:16 Aspect Ratio */
+}
+
 .video-embed iframe {
     position: absolute;
     top: 0;
@@ -631,8 +636,9 @@ main {
     }
 }
 
-/* YouTube Lite Embeds */
-.youtube-lite {
+/* YouTube & TikTok Lite Embeds */
+.youtube-lite,
+.tiktok-lite {
     position: absolute;
     top: 0;
     left: 0;
@@ -646,11 +652,13 @@ main {
     transition: transform 0.3s ease;
 }
 
-.youtube-lite:hover {
+.youtube-lite:hover,
+.tiktok-lite:hover {
     transform: scale(1.02);
 }
 
-.youtube-lite .play-btn {
+.youtube-lite .play-btn,
+.tiktok-lite .play-btn {
     width: 68px;
     height: 48px;
     position: absolute;
@@ -663,11 +671,18 @@ main {
     backdrop-filter: blur(4px);
 }
 
-.youtube-lite:hover .play-btn {
+.youtube-lite:hover .play-btn,
+.tiktok-lite:hover .play-btn {
     background-color: #ff0000;
 }
 
-.youtube-lite .play-btn::before {
+.tiktok-lite:hover .play-btn {
+    background-color: #00f2fe;
+    /* TikTok themed hover color instead of red */
+}
+
+.youtube-lite .play-btn::before,
+.tiktok-lite .play-btn::before {
     content: '';
     position: absolute;
     top: 50%;
