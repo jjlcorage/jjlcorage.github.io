@@ -553,6 +553,14 @@ main {
     transition-delay: 1.2s;
 }
 
+.delay-13 {
+    transition-delay: 1.3s;
+}
+
+.delay-14 {
+    transition-delay: 1.4s;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .logo {
