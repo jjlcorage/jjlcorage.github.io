@@ -300,18 +300,21 @@ main {
     overflow: hidden;
     padding: 1rem;
     flex: 1 1 300px;
-    max-width: calc(33.333% - 1.34rem); /* Max 3 columns on large screens */
+    max-width: calc(33.333% - 1.34rem);
+    /* Max 3 columns on large screens */
 }
 
 @media (max-width: 1024px) {
     .video-card {
-        max-width: calc(50% - 1rem); /* Max 2 columns on medium screens */
+        max-width: calc(50% - 1rem);
+        /* Max 2 columns on medium screens */
     }
 }
 
 @media (max-width: 768px) {
     .video-card {
-        max-width: 100%; /* 1 column on small screens */
+        max-width: 100%;
+        /* 1 column on small screens */
     }
 }
 
@@ -544,6 +547,10 @@ main {
 
 .delay-11 {
     transition-delay: 1.1s;
+}
+
+.delay-12 {
+    transition-delay: 1.2s;
 }
 
 /* Responsive Design */
