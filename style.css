@@ -304,10 +304,24 @@ main {
     /* Max 3 columns on large screens */
 }
 
+.portfolio-grid.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.portfolio-grid.grid-4 .video-card {
+    max-width: none;
+    width: 100%;
+}
+
 @media (max-width: 1024px) {
     .video-card {
         max-width: calc(50% - 1rem);
         /* Max 2 columns on medium screens */
+    }
+    .portfolio-grid.grid-4 {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -315,6 +329,9 @@ main {
     .video-card {
         max-width: 100%;
         /* 1 column on small screens */
+    }
+    .portfolio-grid.grid-4 {
+        grid-template-columns: 1fr;
     }
 }
 
