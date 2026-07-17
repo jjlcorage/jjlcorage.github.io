@@ -70,7 +70,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.youtube-lite').forEach(el => {
         const videoId = el.getAttribute('data-video-id');
         // Set background image to thumbnail
-        el.style.backgroundImage = `url(https://i.ytimg.com/vi/${videoId}/hqdefault.jpg)`;
+        if (!el.style.backgroundImage) {
+            el.style.backgroundImage = `url(https://i.ytimg.com/vi/${videoId}/hqdefault.jpg)`;
+        }
 
         el.addEventListener('click', () => {
             const iframe = document.createElement('iframe');
