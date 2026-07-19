@@ -315,6 +315,11 @@ main {
     width: 100%;
 }
 
+.portfolio-grid.center-single-4 .video-card {
+    flex: 0 1 calc(25% - 1.5rem);
+    max-width: calc(25% - 1.5rem);
+}
+
 @media (max-width: 1024px) {
     .video-card {
         max-width: calc(50% - 1rem);
@@ -322,6 +327,10 @@ main {
     }
     .portfolio-grid.grid-4 {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .portfolio-grid.center-single-4 .video-card {
+        flex: 0 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
     }
 }
 
@@ -332,6 +341,10 @@ main {
     }
     .portfolio-grid.grid-4 {
         grid-template-columns: 1fr;
+    }
+    .portfolio-grid.center-single-4 .video-card {
+        flex: 0 1 100%;
+        max-width: 100%;
     }
 }
 
